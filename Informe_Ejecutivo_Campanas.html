@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Ejecutivo - Campañas Publicitarias</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #1f4788;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #1f4788;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .kpi-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .kpi-card {
+            background: white;
+            padding: 20px;
+            border-left: 4px solid #2e5c8a;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .kpi-card .number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1f4788;
+            margin: 10px 0;
+        }
+        
+        .kpi-card .label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #2e5c8a;
+            font-size: 20px;
+            border-bottom: 2px solid #2e5c8a;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            color: #1f4788;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .critical {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        
+        .positive {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #2e5c8a;
+            color: white;
+        }
+        
+        th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        tbody tr:hover {
+            background: #f0f0f0;
+        }
+        
+        .graphic-ref {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .recommendation {
+            background: #fff8e1;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #f39c12;
+            border-radius: 4px;
+        }
+        
+        .recommendation strong {
+            color: #d68910;
+        }
+        
+        .footer {
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .alert-box {
+            background: #ffebee;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 INFORME EJECUTIVO</h1>
+            <p><strong>Análisis de Desempeño de Campañas Publicitarias</strong></p>
+            <p>Período: 22 de February de 2025 - 05 de January de 2026</p>
+            <p>Fecha de Reporte: 14 de February de 2026 a las 11:40</p>
+        </div>
+        
+        <div class="kpi-section">
+            <div class="kpi-card">
+                <div class="label">Revenue Total</div>
+                <div class="number positive">$40,368</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Inversión Total</div>
+                <div class="number">$7,722</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">ROAS Promedio</div>
+                <div class="number positive">6.68x</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Conversiones</div>
+                <div class="number">996</div>
+            </div>
+        </div>
+        
+        <section>
+            <h2>1. RESUMEN EJECUTIVO</h2>
+            <p>
+                Durante el período analizado, se evaluaron <strong>10 campañas publicitarias</strong> 
+                distribuidas en <strong>4 plataformas principales</strong> (TikTok Ads, Instagram Ads, LinkedIn Ads, 
+                Facebook Ads) dirigidas a <strong>5 segmentos de audiencia</strong>.
+            </p>
+            <p>
+                <strong>Rendimiento General:</strong><br>
+                • Ingresos totales: <strong>$40,368.47</strong><br>
+                • Inversión total: <strong>$7,721.54</strong><br>
+                • ROAS promedio: <strong>6.68x</strong> (ganancia de 5.68x sobre inversión)<br>
+                • Conversiones: <strong>996</strong><br>
+                • CPA promedio: <strong>$20.03</strong><br>
+                • Impresiones: <strong>404,183</strong><br>
+                • CTR promedio: <strong>9.18%</strong>
+            </p>
+        </section>
+        
+        <section>
+            <h2>2. HALLAZGOS CLAVE</h2>
+            
+            <h3>2.1 Campañas Destacadas Positivamente</h3>
+            <ul>
+                <li>
+                    La campaña <strong>CAMP-529903</strong> en 
+                    <strong>Instagram Ads</strong> logró un 
+                    <span class="positive">ROAS de 14.85x</span>, 
+                    generando <strong>$6,417.58</strong>.
+                </li>
+                <li>
+                    La campaña <strong>CAMP-631262</strong> obtuvo 
+                    el mayor número de conversiones (<strong>190</strong>), 
+                    con un CPA de solo <strong>$0.73</strong>.
+                </li>
+            </ul>
+            
+            <h3>2.2 Áreas de Preocupación Crítica</h3>
+            <div class="alert-box">
+                <p>
+                    La campaña <span class="critical">CAMP-750800</span> en 
+                    Instagram Ads genera un 
+                    <span class="critical">ROAS de 0.03x</span>, 
+                    resultando en una <span class="critical">pérdida de $1,621.86</span>.
+                    <br><strong>🔴 RECOMENDACIÓN INMEDIATA: Pausar esta campaña en los próximos 2 días.</strong>
+                </p>
+            </div>
+            
+            <h3>2.3 Variabilidad en Desempeño</h3>
+            <ul>
+                <li>
+                    Variabilidad extrema en CTR (rango: 0.45% - 34.61%),
+                    sugiriendo inconsistencia en segmentación.
+                </li>
+                <li>
+                    CPA varía desde $0.73 hasta $74.19,
+                    brecha de 102x de variación.
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>3. ANÁLISIS POR PLATAFORMA</h2>
+            <p>Ver <strong>Gráfica 3</strong> del dashboard para visualización comparativa.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plataforma</th>
+                        <th>Revenue</th>
+                        <th>Inversión</th>
+                        <th>Conversiones</th>
+                        <th>ROAS</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td><strong>Facebook Ads</strong></td>
+                        <td>$6,178</td>
+                        <td>$808</td>
+                        <td>43</td>
+                        <td><span class="positive">7.65x</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Instagram Ads</strong></td>
+                        <td>$14,575</td>
+                        <td>$3,423</td>
+                        <td>416</td>
+                        <td><span class="positive">4.26x</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>LinkedIn Ads</strong></td>
+                        <td>$4,342</td>
+                        <td>$1,848</td>
+                        <td>105</td>
+                        <td><span class="positive">2.35x</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>TikTok Ads</strong></td>
+                        <td>$15,274</td>
+                        <td>$1,643</td>
+                        <td>432</td>
+                        <td><span class="positive">9.30x</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>4. RECOMENDACIONES ESTRATÉGICAS</h2>
+            
+            <div class="recommendation">
+                <strong>🔴 ACCIONES INMEDIATAS (Próximos 7 días)</strong>
+                <ul>
+                    <li><strong>Pausar campaña de bajo rendimiento:</strong> Detener campañas con ROAS < 1.0 (identificadas en Gráfica 1).</li>
+                    <li><strong>Auditar creativo y segmentación:</strong> Revisar campañas con CTR anómalo. Ver Gráfica 5.</li>
+                    <li><strong>Investigar discrepancias:</strong> Alto CTR pero baja conversion_rate sugiere problema en landing page.</li>
+                </ul>
+            </div>
+            
+            <div class="recommendation">
+                <strong>🟡 OPTIMIZACIÓN DE PRESUPUESTO (30 días)</strong>
+                <ul>
+                    <li><strong>Reasignar presupuesto:</strong> Incrementar inversión en campañas con ROAS > 5.0. Ver Gráfica 2.</li>
+                    <li><strong>Replicar modelo ganador:</strong> Analizar elementos de CAMP-529903 (ROAS 14.85x).</li>
+                    <li><strong>Enfoque en audiencia 45-54:</strong> Mejor engagement según Gráfica 8.</li>
+                </ul>
+            </div>
+            
+            <div class="recommendation">
+                <strong>🟢 MEJORA CONTINUA (60-90 días)</strong>
+                <ul>
+                    <li><strong>Pruebas A/B:</strong> Para plataforma con mejor ROAS, testear variaciones creativas.</li>
+                    <li><strong>Reducir dispersión:</strong> Estandarizar procesos para disminuir variabilidad extrema en CTR y CPA.</li>
+                    <li><strong>Dashboard automático:</strong> Alertas cuando ROAS cae por debajo de 2.0x.</li>
+                    <li><strong>Monitoreo de tendencias:</strong> Revisar Timeline de Campañas mensualmente.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>5. REFERENCIAS A GRÁFICAS GENERADAS</h2>
+            <p>Los siguientes análisis visuales (archivos .PNG) apoyan las conclusiones:</p>
+            
+            <div class="graphic-ref">
+                <strong>📊 Gráfica 1: ROAS por Campaña (Dashboard)</strong><br>
+                Campañas rentables (barras verdes) vs no rentables (rojo). CAMP-750800 muestra pérdida crítica.
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Gráfica 2: Revenue vs Costo Total</strong><br>
+                Campañas arriba de línea punteada son rentables. Base para decisiones de inversión.
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Gráfica 3: ROAS por Plataforma</strong><br>
+                Comparación directa de eficiencia por canal para reasignación presupuestaria.
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Gráfica 4: Conversiones por Tipo de Campaña</strong><br>
+                Identifica qué tipos generan más conversiones para optimizar mix.
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Gráfica 5: CTR vs Conversion Rate</strong><br>
+                Identifica anomalías. Segment superior-derecho es el ideal.
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Gráfica 6: Distribución de Presupuesto por Plataforma</strong><br>
+                Base para rebalanceo presupuestario según ROAS.
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Gráfica 7: Impresiones vs Clicks</strong><br>
+                Evalúa calidad de segmentación (pendiente = CTR).
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Gráfica 8: Engagement Rate por Audiencia</strong><br>
+                Identifica audiencias más receptivas.
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Gráfica 9: CPA por Campaña</strong><br>
+                Barras verdes (CPA bajo) vs rojas (CPA alto) para optimización.
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Matriz de Correlación</strong><br>
+                Revenue y ROAS fuertemente correlacionados (0.811). Optimizar ROAS optimiza revenue directamente.
+            </div>
+            
+            <div class="graphic-ref">
+                <strong>📊 Timeline de Campañas</strong><br>
+                Tendencias temporales para identificar patrones estacionales.
+            </div>
+        </section>
+        
+        <section>
+            <h2>6. TABLA RESUMEN DE CAMPAÑAS (Por ROAS)</h2>
+            <table style="font-size: 12px;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Plataforma</th>
+                        <th>Tipo</th>
+                        <th>Impresiones</th>
+                        <th>Conv</th>
+                        <th>Costo</th>
+                        <th>Revenue</th>
+                        <th>ROAS</th>
+                        <th>CPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr style="background: white;">
+                        <td><strong>CAMP-529903</strong></td>
+                        <td>Instagram Ads</td>
+                        <td>Lead Generation</td>
+                        <td>74,969</td>
+                        <td>53</td>
+                        <td>$432.17</td>
+                        <td>$6417.58</td>
+                        <td style="color: #27ae60; font-weight: bold;">14.85x</td>
+                        <td>$8.15</td>
+                    </tr>
+
+                    <tr style="background: white;">
+                        <td><strong>CAMP-27824</strong></td>
+                        <td>TikTok Ads</td>
+                        <td>Engagement</td>
+                        <td>77,552</td>
+                        <td>145</td>
+                        <td>$684.39</td>
+                        <td>$7895.10</td>
+                        <td style="color: #27ae60; font-weight: bold;">11.54x</td>
+                        <td>$4.72</td>
+                    </tr>
+
+                    <tr style="background: white;">
+                        <td><strong>CAMP-735392</strong></td>
+                        <td>TikTok Ads</td>
+                        <td>Engagement</td>
+                        <td>18,159</td>
+                        <td>94</td>
+                        <td>$597.82</td>
+                        <td>$5654.86</td>
+                        <td style="color: #27ae60; font-weight: bold;">9.46x</td>
+                        <td>$6.36</td>
+                    </tr>
+
+                    <tr style="background: white;">
+                        <td><strong>CAMP-681453</strong></td>
+                        <td>Instagram Ads</td>
+                        <td>Awareness</td>
+                        <td>49,555</td>
+                        <td>13</td>
+                        <td>$745.67</td>
+                        <td>$6523.69</td>
+                        <td style="color: #27ae60; font-weight: bold;">8.75x</td>
+                        <td>$57.36</td>
+                    </tr>
+
+                    <tr style="background: white;">
+                        <td><strong>CAMP-588508</strong></td>
+                        <td>Facebook Ads</td>
+                        <td>Conversion</td>
+                        <td>24,897</td>
+                        <td>43</td>
+                        <td>$807.92</td>
+                        <td>$6177.96</td>
+                        <td style="color: #27ae60; font-weight: bold;">7.65x</td>
+                        <td>$18.79</td>
+                    </tr>
+
+                    <tr style="background: white;">
+                        <td><strong>CAMP-243962</strong></td>
+                        <td>TikTok Ads</td>
+                        <td>Traffic</td>
+                        <td>9,792</td>
+                        <td>3</td>
+                        <td>$222.56</td>
+                        <td>$1127.39</td>
+                        <td style="color: #27ae60; font-weight: bold;">5.07x</td>
+                        <td>$74.19</td>
+                    </tr>
+
+                    <tr style="background: white;">
+                        <td><strong>CAMP-631262</strong></td>
+                        <td>TikTok Ads</td>
+                        <td>Conversion</td>
+                        <td>44,001</td>
+                        <td>190</td>
+                        <td>$138.19</td>
+                        <td>$596.41</td>
+                        <td style="color: #27ae60; font-weight: bold;">4.32x</td>
+                        <td>$0.73</td>
+                    </tr>
+
+                    <tr style="background: white;">
+                        <td><strong>CAMP-208496</strong></td>
+                        <td>Instagram Ads</td>
+                        <td>Engagement</td>
+                        <td>69,148</td>
+                        <td>161</td>
+                        <td>$579.13</td>
+                        <td>$1589.73</td>
+                        <td style="color: #27ae60; font-weight: bold;">2.75x</td>
+                        <td>$3.60</td>
+                    </tr>
+
+                    <tr style="background: white;">
+                        <td><strong>CAMP-229258</strong></td>
+                        <td>LinkedIn Ads</td>
+                        <td>Engagement</td>
+                        <td>11,627</td>
+                        <td>105</td>
+                        <td>$1847.65</td>
+                        <td>$4341.57</td>
+                        <td style="color: #27ae60; font-weight: bold;">2.35x</td>
+                        <td>$17.60</td>
+                    </tr>
+
+                    <tr style="background: #ffe8e8;">
+                        <td><strong>CAMP-750800</strong></td>
+                        <td>Instagram Ads</td>
+                        <td>Lead Generation</td>
+                        <td>24,483</td>
+                        <td>189</td>
+                        <td>$1666.04</td>
+                        <td>$44.18</td>
+                        <td style="color: #e74c3c; font-weight: bold;">0.03x</td>
+                        <td>$8.82</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>7. CONCLUSIONES</h2>
+            <p>
+                Las campañas presentan <strong>desempeño desigual</strong> con ROAS que varían 
+                desde <span class="critical">0.03x</span> a 
+                <span class="positive">14.85x</span>.
+            </p>
+            <p>
+                <strong>Impacto potencial:</strong> Adoptar las recomendaciones podría 
+                <strong>aumentar ROAS de 6.68x a objetivo de 3.5x+</strong> mediante:
+                <br>1. Eliminación de campañas de pérdida (recuperar ~$1,666)
+                <br>2. Reasignación presupuestaria hacia ganadores
+                <br>3. Replicación de modelos eficientes
+            </p>
+            <p>
+                El análisis visual detallado proporciona evidencia cuantitativa robusta para respaldar 
+                decisiones presupuestarias, permitiendo un enfoque ágil basado en datos.
+            </p>
+        </section>
+        
+        <div class="footer">
+            <p><strong>Documento Confidencial</strong></p>
+            <p>Preparado el 14/02/2026 a las 11:40:28</p>
+            <p>Análisis de 10 campañas - Período de 317 días</p>
+            <p>Para visualizar gráficas, abrir archivos PNG en la carpeta del proyecto</p>
+        </div>
+    </div>
+</body>
+</html>
